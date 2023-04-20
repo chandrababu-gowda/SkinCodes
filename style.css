@@ -164,6 +164,7 @@ image {
 
 .review-section {
   padding: 2rem 0;
+  padding-bottom: 6rem;
 }
 
 .reviews-heading {
@@ -231,4 +232,87 @@ image {
   width: 60%;
   height: 400px;
   border-radius: var(--bor-rad-h);
+}
+
+/*********** Footer Section ***********/
+
+.footer-bg {
+  background-color: var(--dbr);
+}
+
+.footer-section {
+  display: flex;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.footer-section p {
+  color: var(--ly);
+}
+.footer-column {
+  width: 100%;
+}
+
+.footer-logo {
+  color: var(--ly);
+  font-size: 2rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.footer-heading {
+  color: var(--ly);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.footer-phone {
+  margin-bottom: 2rem;
+}
+
+.footer-timings {
+  background-color: var(--ly);
+  border-radius: var(--bor-rad-l);
+  padding: 1.5rem 1rem;
+  box-shadow: 1px 5px 14px #ddaa44ad;
+  margin-right: 1rem;
+  margin-top: -2rem;
+}
+
+.footer-timings h4 {
+  opacity: 0.5;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+.footer-timing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.footer-timings p {
+  color: var(--edbr);
+  font-weight: 600;
+}
+
+.footer-timings hr {
+  /* background-color: var(--edy);
+  height: 10px; */
+  border: 2px solid var(--edy);
+}
+
+.footer-other-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-other-links a {
+  text-decoration: none;
+  color: var(--ly);
+  padding: 0.35rem 0;
 }
