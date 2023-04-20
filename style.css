@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* font-family: 'Arimo', sans-serif; */
+/* font-family: 'Libre Baskerville', serif; */
+
+:root {
+  --db: #1c1c1e;
+  --dbr: #573c24;
+  --edy: #eaba38;
+  --dy: #eac667;
+  --ly: #f3ed9e;
+  --ely: #fffef2;
+  --bor-rad-h: 20px;
+  --bor-rad-l: 10px;
+  --bor1: 1px solid red;
+  --bor2: 1px solid green;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--db);
+}
+
+html {
+  font-size: 16px;
+  font-family: "Arimo", sans-serif;
+  line-height: 1.5rem;
+  letter-spacing: 0.6px;
+}
+
+image {
+  width: 100%;
+}
+
+.gradient-bg {
+  background-image: linear-gradient(to right, var(--dy), var(--ly));
+}
+
+.container {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+}
+
+/*********** Navigation Section ***********/
+
+.navigation-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 0;
+}
+
+.logo {
+  font-size: 1.25rem;
+  color: var(--dbr);
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+}
+
+.links {
+  text-decoration: none;
+  color: var(--dbr);
+  /* font-size: 18px; */
+  font-weight: bold;
+  padding: 0 1rem;
+}
+
+/*********** Hero Section ***********/
+
+.hero-section {
+  padding: 6rem 0;
+}
+
+.hero-content {
+  /* border: var(--bor1); */
+  width: 45%;
+  padding: 3rem 3.5rem;
+  background-color: #ffde9c8d;
+  border-radius: var(--bor-rad-h);
+  box-shadow: -0.5rem 0.5rem var(--edy);
+}
+
+.hero-content-heading {
+  font-size: 5rem;
+  font-family: "Libre Baskerville", serif;
+  color: var(--dbr);
+  line-height: 5.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content-buttons {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: var(--bor-rad-l);
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+}
+
+.primary-btn {
+  background-color: var(--edy);
+  color: var(--dbr);
+  width: 100%;
+}
+
+.secondary-btn {
+  width: 100%;
+  background-color: #ffffff00;
+  border: 2px solid var(--dbr);
+}
