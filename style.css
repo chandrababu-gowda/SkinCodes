@@ -242,6 +242,7 @@ image {
 
 .footer-section {
   display: flex;
+  /* flex-wrap: wrap; */
   gap: 2rem;
   padding: 4rem 0;
 }
@@ -279,7 +280,7 @@ image {
   padding: 1.5rem 1rem;
   box-shadow: 1px 5px 14px #ddaa44ad;
   margin-right: 1rem;
-  margin-top: -2rem;
+  /* margin-top: -2rem; */
 }
 
 .footer-timings h4 {
@@ -315,4 +316,43 @@ image {
   text-decoration: none;
   color: var(--ly);
   padding: 0.35rem 0;
+}
+
+@media (max-width: 1200px) {
+  .hero-content-heading {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    letter-spacing: normal;
+  }
+}
+
+@media (max-width: 430px) {
+  .html {
+    font-size: 16px;
+  }
+
+  /*********** Navigation Section ***********/
+  .nav-links {
+    display: none;
+  }
+
+  /*********** Hero Section ***********/
+  .hero-content {
+    width: 100%;
+  }
+
+  /*********** Services Section ***********/
+  .services {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  /*********** Reviews Section ***********/
+  .reviews {
+    flex-direction: column;
+  }
+
+  /*********** Footer Section ***********/
+  .footer-section {
+    flex-direction: column;
+  }
 }
