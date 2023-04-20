@@ -31,10 +31,6 @@ html {
   letter-spacing: 0.3px;
 }
 
-image {
-  width: 100%;
-}
-
 .gradient-bg {
   background-image: linear-gradient(to right, var(--dy), var(--ly));
 }
@@ -72,7 +68,10 @@ image {
 /*********** Hero Section ***********/
 
 .hero-section {
-  padding: 8rem 0;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hero-content {
@@ -118,6 +117,14 @@ image {
   border: 2px solid var(--dbr);
 }
 
+.hero-image {
+  /* border: var(--bor1); */
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*********** Services Section ***********/
 
 .services-section {
@@ -131,6 +138,10 @@ image {
   font-family: "Libre Baskerville", serif;
   line-height: normal;
   letter-spacing: normal;
+  background: url(./images/highlight.png);
+  background-repeat: no-repeat;
+  background-size: 180px 30px;
+  background-position: left bottom;
 }
 
 .services {
@@ -144,6 +155,7 @@ image {
   display: flex;
   gap: 1rem;
   margin-bottom: 0.5rem;
+  align-items: center;
 }
 
 .icon_name h5 {
@@ -187,26 +199,30 @@ image {
   border-radius: var(--bor-rad-h);
   box-shadow: 1px 2px 15px 2px #eabb3849;
   padding: 1.5em 2em;
+  width: 50%;
 }
 
 .review-img {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  height: 300px;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .img-box {
-  width: 100%;
-  border: var(--bor1);
+  width: 50%;
+  /* border: var(--bor1); */
 }
 
-.before-box {
+.before-box img {
   border-radius: 20px 0 0 20px;
+  height: 100%;
+  width: 100%;
 }
 
-.after-box {
+.after-box img {
+  width: 100%;
+  height: 100%;
   border-radius: 0 20px 20px 0;
 }
 
@@ -224,13 +240,30 @@ image {
   line-height: normal;
   letter-spacing: normal;
   margin-bottom: 1.5rem;
+  background: url(./images/highlight.png);
+  background-repeat: no-repeat;
+  background-size: 160px 30px;
+  background-position: left bottom;
 }
 
 .gallery-images {
-  border: var(--bor1);
+  /* border: var(--bor1); */
   margin: 2rem auto;
-  width: 60%;
-  height: 400px;
+  /* width: 60%; */
+  height: 45vw;
+  border-radius: var(--bor-rad-h);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./images/gallery/1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* filter: blur(2px); */
+}
+
+.gallery-images img {
+  width: 75%;
   border-radius: var(--bor-rad-h);
 }
 
@@ -261,6 +294,13 @@ image {
   font-weight: bold;
   line-height: normal;
   letter-spacing: normal;
+}
+
+.footer-external-links {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, auto);
 }
 
 .footer-heading {
@@ -320,8 +360,8 @@ image {
 
 @media (max-width: 1200px) {
   .hero-content-heading {
-    font-size: 3rem;
-    line-height: 3.5rem;
+    font-size: 3.5rem;
+    line-height: 3.4rem;
     letter-spacing: normal;
   }
 }
@@ -337,8 +377,18 @@ image {
   }
 
   /*********** Hero Section ***********/
+  .hero-section {
+    flex-direction: column;
+    padding-top: 4rem;
+  }
   .hero-content {
     width: 100%;
+    padding: 2.5rem 1.2rem;
+  }
+  .hero-image img {
+    width: 200%;
+    margin-top: 6rem;
+    /* height: 400px; */
   }
 
   /*********** Services Section ***********/
@@ -349,6 +399,23 @@ image {
   /*********** Reviews Section ***********/
   .reviews {
     flex-direction: column;
+  }
+
+  .review-box {
+    width: 100%;
+  }
+
+  /*********** Gallery Section ***********/
+
+  .gallery-images {
+    background: none;
+    margin: 0;
+    height: 100%;
+  }
+
+  .gallery-images img {
+    width: 100%;
+    border-radius: var(--bor-rad-l);
   }
 
   /*********** Footer Section ***********/
