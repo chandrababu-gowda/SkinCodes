@@ -65,6 +65,10 @@ html {
   padding: 0 1rem;
 }
 
+.hamburger {
+  display: none;
+}
+
 /*********** Hero Section ***********/
 
 .hero-section {
@@ -246,25 +250,54 @@ html {
   background-position: left bottom;
 }
 
-.gallery-images {
+.gallery-images-slider {
   /* border: var(--bor1); */
   margin: 2rem auto;
   /* width: 60%; */
-  height: 45vw;
-  border-radius: var(--bor-rad-h);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(./images/gallery/1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  /* filter: blur(2px); */
+  height: 40vw;
+  position: relative;
+  overflow: hidden;
 }
 
-.gallery-images img {
-  width: 75%;
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.gallery-images-slider img {
+  width: 100%;
+  height: 100%;
   border-radius: var(--bor-rad-h);
+  object-fit: cover;
+}
+
+.gallery-btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #ffffff74;
+  font-size: 18px;
+}
+
+.gallery-btn:hover {
+  transform: scale(1.1);
+}
+
+.btn-prev {
+  top: 40%;
+  left: 2%;
+}
+
+.btn-next {
+  top: 40%;
+  right: 2%;
 }
 
 /*********** Footer Section ***********/
@@ -374,6 +407,10 @@ html {
   /*********** Navigation Section ***********/
   .nav-links {
     display: none;
+  }
+
+  .hamburger {
+    display: block;
   }
 
   /*********** Hero Section ***********/
