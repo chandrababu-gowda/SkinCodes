@@ -41,6 +41,10 @@ html {
   padding: 0 2rem;
 }
 
+.hidden {
+  display: none;
+}
+
 /*********** Navigation Section ***********/
 
 .navigation-section {
@@ -63,10 +67,6 @@ html {
   /* font-size: 18px; */
   font-weight: bold;
   padding: 0 1rem;
-}
-
-.hamburger {
-  display: none;
 }
 
 /*********** Hero Section ***********/
@@ -210,7 +210,23 @@ html {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.review-image-slider {
+  /* margin: 2rem auto; */
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  /* z-index: 10px; */
+}
+
+.review-slide {
+  /* padding: 3rem; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s;
 }
 
 .img-box {
@@ -235,6 +251,7 @@ html {
 .gallery-section {
   /* border: var(--bor2); */
   padding: 3rem 0;
+  /* position: absolute; */
 }
 
 .gallery-heading {
@@ -251,15 +268,23 @@ html {
 }
 
 .gallery-images-slider {
+  /* padding: 10rem; */
+  background: url(./images/gallery/gallery-bg/gallery-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
   /* border: var(--bor1); */
+  border-radius: var(--bor-rad-h);
   margin: 2rem auto;
-  /* width: 60%; */
   height: 40vw;
   position: relative;
   overflow: hidden;
 }
 
 .slide {
+  padding: 3rem 2rem;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -405,13 +430,19 @@ html {
   }
 
   /*********** Navigation Section ***********/
+  .navgation-logo_ham {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .nav-links {
     display: none;
   }
 
-  .hamburger {
+  /* .hamburger {
     display: block;
-  }
+  } */
 
   /*********** Hero Section ***********/
   .hero-section {
@@ -442,12 +473,24 @@ html {
     width: 100%;
   }
 
+  .review-image-slider {
+    height: 250px;
+  }
+
   /*********** Gallery Section ***********/
 
   .gallery-images {
     background: none;
     margin: 0;
     height: 100%;
+  }
+
+  .gallery-images-slider {
+    background: none;
+  }
+
+  .slide {
+    padding: 0;
   }
 
   .gallery-images img {
